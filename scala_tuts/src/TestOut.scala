@@ -25,5 +25,6 @@ object TestOut {
     // justification example (5 spaces left or right)
     printf("'%5d'\n", 5) //justification right
     printf("'%-5d'\n", 5) //justification left
+    printf("'%05d'\n", 5) //zero fill
   }
 }
