@@ -26,5 +26,6 @@ object TestOut {
     printf("'%5d'\n", 5) //justification right
     printf("'%-5d'\n", 5) //justification left
     printf("'%05d'\n", 5) //zero fill
+    printf("'%.5f'\n", 3.14) //zero fill right after decimal number. 5 numbers after comma
   }
 }
