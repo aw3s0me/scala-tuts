@@ -16,6 +16,14 @@ object TestOut {
     println(s"Hello $name")
 
     // print out formatted. $age+1 - to calculate + 1 age, weight.2 for double decimal
+    //                                          %c for characters
+    //                                          %d for integers
+    //                                          %f for floating point numbers
+    //                                          %f for strings
     println(f"I am ${age + 1} and weight $weight%.2f")
+
+    // justification example (5 spaces left or right)
+    printf("'%5d'\n", 5) //justification right
+    printf("'%-5d'\n", 5) //justification left
   }
 }
