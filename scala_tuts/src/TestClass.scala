@@ -25,12 +25,11 @@ object TestClass {
 
     this.setName(name)
 
+    // DEFINITION OF VARIABLES
     val id = Animal.newIdNum
-
-    protected var _prop1 = "prop"
-
+    protected var _prop1: String = "prop"
     // FIELD PROTECTED (also public, protected, private)
-    protected var field = "Field"
+    protected var field: String = "Field"
 
     // GETTERS and SETTERS. VARIANT 1. WORSE THAN VARIANT 1
     def getName() : String = this.name
