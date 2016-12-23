@@ -11,6 +11,11 @@ object TestClass {
 
     val whisker = new Animal("Whisker", "Meow")
     println(s"${whisker.getName} with id ${whisker.id} says ${whisker.getSound}")
+    println("getter-setter test")
+    whisker.prop1 = "val1"
+    println(whisker.prop1)
+    whisker.prop1 = "val2"
+    println(whisker.prop1)
   }
 
   // DEFINITION (usually done outside of main)
@@ -22,10 +27,12 @@ object TestClass {
 
     val id = Animal.newIdNum
 
+    protected var _prop1 = "prop"
+
     // FIELD PROTECTED (also public, protected, private)
     protected var field = "Field"
 
-    // GETTERS and SETTERS
+    // GETTERS and SETTERS. VARIANT 1. WORSE THAN VARIANT 1
     def getName() : String = this.name
     def getSound() : String = this.sound
 
@@ -41,6 +48,13 @@ object TestClass {
 
     def setSound(sound: String): Unit = {
       this.sound = sound
+    }
+
+    // GETTERS and SETTERS. VARIANT 2. BETTER
+    def prop1:String = _prop1
+
+    def prop1_=(propVal: String): Unit = {
+      _prop1 = propVal
     }
 
     // CUSTOM CONSTRUCTOR

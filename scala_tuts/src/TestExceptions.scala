@@ -11,7 +11,7 @@ object TestExceptions {
     } finally {
       // clean up
     }
-    
+
     println("3 / 0: " + divideNums(3, 0))
   }
 }
